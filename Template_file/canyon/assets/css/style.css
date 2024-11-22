@@ -1758,7 +1758,7 @@ Academics Section Area CSS
 }
 .faculty-model .faculty-card .image .info {
   height: 100%;
-  top: 300px;
+  top: 00px;
   position: absolute;
   padding: 35px 30px 30px;
   -webkit-transition: .5s;
