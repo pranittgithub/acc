@@ -68,16 +68,25 @@
     
         <script>
             const popup = document.querySelector('.popup');
-            const x = document.querySelector('.popup-content h1')
-    
-            window.addEventListener('load', () => {
-                popup.classList.add('showPopup');
-                popup.childNodes[1].classList.add('showPopup');
-            })
-            x.addEventListener('click', () => {
+            const closeButton = document.querySelector('.popup-content h1');
+        
+            // Check if the popup has already been shown
+            if (!localStorage.getItem('popupDisplayed')) {
+                // Show the popup if it hasn't been shown before
+                window.addEventListener('load', () => {
+                    popup.classList.add('showPopup');
+                    popup.childNodes[1].classList.add('showPopup');
+                });
+        
+                // Set a flag in localStorage to remember that the popup was shown
+                localStorage.setItem('popupDisplayed', 'true');
+            }
+        
+            // Close the popup when the close button is clicked
+            closeButton.addEventListener('click', () => {
                 popup.classList.remove('showPopup');
                 popup.childNodes[1].classList.remove('showPopup');
-            })
+            });
         </script>
     </body>
         
@@ -1267,7 +1276,7 @@
                                 <h4>Our Results</h4>
                                 <ul>
                                     <li><a href="graduate.html"><i class='bx bx-chevron-right'></i> Strategies</a></li>
-                                    <li><a href="online-education.html"><i class='bx bx-chevron-right'></i> Statistics</a></li>
+                                    <!-- <li><a href="online-education.html"><i class='bx bx-chevron-right'></i> Statistics</a></li> -->
                                     <li><a href="faculty.html"><i class='bx bx-chevron-right'></i>Student Testimonials</a></li>
                                     <!-- <li><a href="date-deadlines.html"><i class='bx bx-chevron-right'></i> Time Schedule</a></li>
                                     <li><a href="how-to-apply.html"><i class='bx bx-chevron-right'></i> Apply For Admissions</a></li>
