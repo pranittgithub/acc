@@ -453,7 +453,7 @@ Banner Area 2 CSS
 =================================================*/
 
 .big-bg-2{
-  background-image: url(../img/banner/bg-Image-1.jpg);
+  background-image: url(../img/banner/12.jpg);
   background-size: cover;
   position:relative;
   background-repeat: no-repeat;
@@ -938,7 +938,7 @@ About Us Area 2 CSS
 }
 
 .about-us-area-2 .content-items .image.ct-bg-3{
-  background-image: url(../img/all-img/about-image-4.png);
+  background-image: url(../img//about-image-4.png);
 }
 
 .about-us-area-2 .content-items .content {
