@@ -22,3 +22,4 @@ $(function() {
 		$('.sidebar-boxed').addClass('sidebar-dark');
 	});
 });
+

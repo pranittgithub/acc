@@ -21,6 +21,9 @@
     </head>
     <body>
 
+
+        
+
         <!-- preloader -->
         <div class="preloader-container" id="preloader">
             <div class="preloader-dot"></div>
@@ -31,13 +34,60 @@
         </div>
         <!-- preloader -->
 
+        <div class="popup">
+            <div class="popup-content">
+                
+    <form action="#" method="post" style="max-width: 400px; margin: auto; background: #ffffff; padding: 20px; border-radius: 8px; ">
+        <h2 style="text-align: center; color: #333;">Contact Us</h2>
+
+        <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name:</label>
+        <input type="text" id="name" name="name" required 
+               style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+        <input type="email" id="email" name="email" required 
+               style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold;">Phone No:</label>
+        <input type="tel" id="phone" name="phone" required 
+               style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+        <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Inquiry Message:</label>
+        <textarea id="message" name="message" rows="4" required 
+                  style="width: 100%; padding: 7px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+        <button type="submit" style="width: 100%; padding: 10px; background-color: #007BFF; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">
+            Submit
+        </button>
+    </form>
+                 <h1><i class='bx bx-x'></i>  </h1>
+                <!-- <h2>Subscribe...</h2> -->
+                <!-- <p>And some dummy content that shows on this popup Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione quisquam iure libero impedit aspernatur, expedita quaerat mollitia delectus, eius ad excepturi inventore aperiam perspiciatis voluptatum porro. Tenetur libero, aspernatur nobis quod autem assumenda, nostrum esse reiciendis quibusdam vitae iure harum illum similique consectetur ut ipsam, at repellendus! Nulla est debitis illo.</p>  -->
+            </div>
+        </div>
+    
+        <script>
+            const popup = document.querySelector('.popup');
+            const x = document.querySelector('.popup-content h1')
+    
+            window.addEventListener('load', () => {
+                popup.classList.add('showPopup');
+                popup.childNodes[1].classList.add('showPopup');
+            })
+            x.addEventListener('click', () => {
+                popup.classList.remove('showPopup');
+                popup.childNodes[1].classList.remove('showPopup');
+            })
+        </script>
+    </body>
+        
        <!-- Start Navbar Area Start -->
        <div class="navbar-area style-2" id="navbar">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo-light" src="assets/img/logo/white-logo.png" alt="logo">
-                    <img class="logo-dark" src="assets/img/logo/logo.png" alt="logo">
+                    <img class="logo-light" src="assets/img/logo/whitelg.png"  alt="logo">
+                    <img class="logo-dark" src="assets/img/logo/lgg.png" alt="logo">
                 </a>
                 <div class="other-option d-lg-none">
                     <div class="option-item">
@@ -487,8 +537,9 @@
                             <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
                         </div>
                     </div>
+
                     <div class="content-items" data-dot="<button>03</button>">
-                        <div class="image ct-bg-3" data-aos="fade-zoom-in" data-aos-delay="100">
+                        <div class="image ct-bg-2" data-aos="fade-zoom-in" data-aos-delay="100">
                         </div>
                         <div class="content" data-aos="fade-up" data-aos-delay="200">
                             <span>Campus Information</span>
@@ -497,6 +548,16 @@
                             <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
                         </div>
                     </div>
+                    <!-- <div class="content-items" data-dot="<button>03</button>">
+                        <div class="image ct-bg-3" data-aos="fade-zoom-in" data-aos-delay="100">
+                        </div>
+                        <div class="content" data-aos="fade-up" data-aos-delay="200">
+                            <span>Campus Information</span>
+                            <h2>Where Knowledge Meets Innovation</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tem incid idunt ut labore et dolore magna aliqua. Ut enim ad minim iam quis nostrud xerci tation ulla mco laboris nisi ut</p>
+                            <a class="default-btn" href="schedule-tour.html">Schedule A Tour</a>
+                        </div>
+                    </div> -->
                     <div class="content-items" data-dot="<button>04</button>">
                         <div class="image ct-bg-2" data-aos="fade-zoom-in" data-aos-delay="100">
                         </div>
@@ -1254,7 +1315,7 @@
                         </div>
                     </div>
                     <div class="copy-logo">
-                        <img src="assets/img/logo/footer-Logo.png" alt="image">
+                        <img src="assets/img/logo/footerlg.png"  style="width: 110px; height: 110px" alt="image">
                     </div>
                 </div>
             </div>
