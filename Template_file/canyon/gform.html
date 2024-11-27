@@ -53,7 +53,105 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
+    <div class="popup">
+        <div class="popup-content">
+            
+        <!-- <form action="https://formsubmit.co/d1c45e4a01c8276759d2034bc02f8ce9" method="POST" target="_blank" style="max-width: 400px; margin: auto; background: #ffffff; padding: 20px; border-radius: 8px; "> -->
+        <form style="max-width: 400px; margin: auto; background: #ffffff; padding: 20px; border-radius: 8px; ">
+            <h2 style="text-align: center; color: #333;">Contact Us</h2>
+
+            <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name:</label>
+            <input type="text" id="name" name="name" required 
+                style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+            <input type="email" id="email" name="email" required 
+                style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="phone" style="display: block; margin-bottom: 5px; font-weight: bold;">Phone No:</label>
+            <input type="tel" id="phone" name="phone" required 
+                style="width: 100%; padding: 7px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+
+            <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Inquiry Message:</label>
+            <textarea id="message" name="message" rows="4" required 
+                    style="width: 100%; padding: 7px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+            <button type="submit" style="width: 100%; padding: 10px; background-color: var(--mainColor); color: black; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">
+                Submit
+            </button>
+        </form>
+             <h1><i class='bx bx-x'></i></h1>
+            <!-- <h2>Subscribe...</h2> -->
+            <!-- <p>And some dummy content that shows on this popup Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, ratione quisquam iure libero impedit aspernatur, expedita quaerat mollitia delectus, eius ad excepturi inventore aperiam perspiciatis voluptatum porro. Tenetur libero, aspernatur nobis quod autem assumenda, nostrum esse reiciendis quibusdam vitae iure harum illum similique consectetur ut ipsam, at repellendus! Nulla est debitis illo.</p>  -->
+        </div>
+    </div>
+
+    <script>
+        const popup = document.querySelector('.popup');
+        const closeButton = document.querySelector('.popup-content h1');
+        const submitEvent = document.querySelector('form');
+        submitEvent.addEventListener('submit',async function(e) {
+            e.preventDefault();
+            const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfO4r9VkMjMqfbGvB7RJF5QZueMcjoYPIRUFS7b5PiztVsQLg/formResponse';
+            const formData = new FormData();
+            formData.append('entry.740387261', document.getElementById('name').value);
+            formData.append('entry.710790059', document.getElementById('email').value);
+            formData.append('entry.789768510', document.getElementById('message').value);
+            formData.append('entry.964566813', document.getElementById('phone').value);
+            try {
+                const response = await fetch(formURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+
+                // Show a success message
+                alert('Thank you! Your response has been submitted.');
+                document.querySelector('form').reset();
+            } catch (error) {
+                // Handle errors
+                alert(`Error submitting the form. Please try again. ${error}`);
+                console.error(error);
+            }
+            
+        })
+        // Check if the popup has already been shown in this session
+        if (!sessionStorage.getItem('popupDisplayed')) {
+            // Show the popup when the page loads
+            window.addEventListener('load', () => {
+                popup.classList.add('showPopup');
+                popup.querySelector('.popup-content').classList.add('showPopup');
+    
+                // Set the flag in sessionStorage to indicate the popup has been shown for this session
+                sessionStorage.setItem('popupDisplayed', 'true');
+            });
+        }
+    
+        // Close the popup when the close button is clicked
+        closeButton.addEventListener('click', () => {
+            popup.classList.remove('showPopup');
+            popup.querySelector('.popup-content').classList.remove('showPopup');
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="form-container">
         <h1>Contact Us</h1>
         <form id="customForm">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -61,9 +159,9 @@
             <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Submit</button>
         </form>
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         document.getElementById('customForm').addEventListener('submit', async function(e) {
             e.preventDefault();
 
@@ -92,6 +190,6 @@
                 console.error(error);
             }
         });
-    </script>
+    </script> -->
 </body>
 </html>
