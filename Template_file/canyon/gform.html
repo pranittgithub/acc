@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            color: #333;
+        }
+        .form-container input, .form-container textarea, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-container textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-container button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="customForm">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('customForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Replace the Google Form's POST URL
+            const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfO4r9VkMjMqfbGvB7RJF5QZueMcjoYPIRUFS7b5PiztVsQLg/formResponse';
+
+            // Map custom form fields to Google Form input names
+            const formData = new FormData();
+            formData.append('entry.740387261', document.getElementById('name').value);
+            formData.append('entry.710790059', document.getElementById('email').value);
+            formData.append('entry.789768510', document.getElementById('message').value);
+
+            try {
+                const response = await fetch(formURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+
+                // Show a success message
+                alert('Thank you! Your response has been submitted.');
+                document.getElementById('customForm').reset();
+            } catch (error) {
+                // Handle errors
+                alert('Error submitting the form. Please try again.');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+</html>

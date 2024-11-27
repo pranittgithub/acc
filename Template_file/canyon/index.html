@@ -57,7 +57,7 @@
                 <textarea id="message" name="message" rows="4" required 
                         style="width: 100%; padding: 7px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
 
-                <button type="submit" style="width: 100%; padding: 10px; background-color: #007BFF; color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">
+                <button type="submit" style="width: 100%; padding: 10px; background-color: var(--mainColor); color: #fff; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">
                     Submit
                 </button>
             </form>
@@ -71,25 +71,26 @@
             const popup = document.querySelector('.popup');
             const closeButton = document.querySelector('.popup-content h1');
         
-            // Check if the popup has already been shown
-            if (!localStorage.getItem('popupDisplayed')) {
-                // Show the popup if it hasn't been shown before
+            // Check if the popup has already been shown in this session
+            if (!sessionStorage.getItem('popupDisplayed')) {
+                // Show the popup when the page loads
                 window.addEventListener('load', () => {
                     popup.classList.add('showPopup');
-                    popup.childNodes[1].classList.add('showPopup');
-                });
+                    popup.querySelector('.popup-content').classList.add('showPopup');
         
-                // Set a flag in localStorage to remember that the popup was shown
-                localStorage.setItem('popupDisplayed', 'true');
+                    // Set the flag in sessionStorage to indicate the popup has been shown for this session
+                    sessionStorage.setItem('popupDisplayed', 'true');
+                });
             }
         
             // Close the popup when the close button is clicked
             closeButton.addEventListener('click', () => {
                 popup.classList.remove('showPopup');
-                popup.childNodes[1].classList.remove('showPopup');
+                popup.querySelector('.popup-content').classList.remove('showPopup');
             });
         </script>
-    </body>
+        
+    
         
        <!-- Start Navbar Area Start -->
        <div class="navbar-area style-2" id="navbar">
