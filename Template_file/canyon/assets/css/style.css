@@ -3634,7 +3634,7 @@ Contact Area CSS
   transition: var(--transition);
   border: none !important;
   border-radius: 3px;
-  border: 1px solid #EEEEEE !important;
+  border: 1px solid var(--paragraphColor) !important;
   height: 60px;
   padding-left: 15px;
   color: var(--paragraphColor);
@@ -3651,7 +3651,7 @@ Contact Area CSS
   margin-bottom: 30px;
   height: 60px;
   color: #212529;
-  border: 1px solid #EEEEEE;
+  border: 1px solid var(--paragraphColor);
   box-shadow: none;
   padding-left: 20px;
 }

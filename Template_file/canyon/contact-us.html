@@ -741,7 +741,8 @@
                             </div>
 
                             <div class="contact-form">
-                                <form id="contactForm" action="https://formsubmit.co/d1c45e4a01c8276759d2034bc02f8ce9" method="POST" target="_blank">
+                                <!-- <form id="contactForm" action="https://formsubmit.co/d1c45e4a01c8276759d2034bc02f8ce9" method="POST" target="_blank"> -->
+                                <form id="contactForm">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-6">
                                             <div class="form-group">
@@ -805,6 +806,38 @@
                             </div>
                         </div>
                     </div>
+                    <script>
+                        const submitEvent = document.querySelector('form');
+                        submitEvent.addEventListener('submit',async function(e) {
+                            e.preventDefault();
+                            const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfO4r9VkMjMqfbGvB7RJF5QZueMcjoYPIRUFS7b5PiztVsQLg/formResponse';
+                            const formData = new FormData();
+                            formData.append('entry.740387261', document.getElementById('name').value);
+                            formData.append('entry.1526581267', document.getElementById('name2').value);
+                            formData.append('entry.710790059', document.getElementById('email').value);
+                            formData.append('entry.789768510', document.getElementById('message').value);
+                            formData.append('entry.964566813', document.getElementById('phone_number').value);
+                            try {
+                                const response = await fetch(formURL, {
+                                    method: 'POST',
+                                    mode: 'no-cors',
+                                    body: formData
+                                });
+            
+                                alert('Thank you! Your response has been submitted.');
+                                document.querySelector('form').reset();
+                            } catch (error) {
+                                // Handle errors
+                                // alert(`Error submitting the form. Please try again. ${error}`);
+                                console.error(error);
+                            }
+                            
+                        })
+                    
+            
+                    </script>
+
+
                     <div class="col-lg-4">
                         <div class="contact-info">
 

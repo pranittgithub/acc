@@ -70,7 +70,34 @@
         <script>
             const popup = document.querySelector('.popup');
             const closeButton = document.querySelector('.popup-content h1');
-        
+            const submitEvent = document.querySelector('form');
+            submitEvent.addEventListener('submit',async function(e) {
+                e.preventDefault();
+                const formURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfO4r9VkMjMqfbGvB7RJF5QZueMcjoYPIRUFS7b5PiztVsQLg/formResponse';
+                const formData = new FormData();
+                formData.append('entry.740387261', document.getElementById('name').value);
+                formData.append('entry.710790059', document.getElementById('email').value);
+                formData.append('entry.789768510', document.getElementById('message').value);
+                formData.append('entry.964566813', document.getElementById('phone').value);
+                try {
+                    const response = await fetch(formURL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        body: formData
+                    });
+    
+                    // Show a success message
+                    popup.classList.remove('showPopup');
+                    popup.querySelector('.popup-content').classList.remove('showPopup');
+                    alert('Thank you! Your response has been submitted.');
+                    // document.querySelector('form').reset();
+                } catch (error) {
+                    // Handle errors
+                    // alert(`Error submitting the form. Please try again. ${error}`);
+                    console.error(error);
+                }
+                
+            })
             // Check if the popup has already been shown in this session
             if (!sessionStorage.getItem('popupDisplayed')) {
                 // Show the popup when the page loads
