@@ -55,6 +55,9 @@ This files table contents are outlined below>>>>>
 /*================================================
 Default CSS
 =================================================*/
+
+
+
 :root {
   --fontFamily: 'Lexend', sans-serif;
   --mainColor: #E23E57;
@@ -1751,6 +1754,14 @@ Academics Section Area CSS
 .faculty-model .col-lg-6 .faculty-card{
   margin-bottom: 30px;
 }
+
+.faculty-model .col-lg-6 .faculty-card.small-card {
+  max-width: 300px; /* Set a smaller width */
+  padding: 10px; /* Reduce padding */
+  font-size: 14px; /* Adjust font size for smaller look */
+}
+
+
 .faculty-model .col-lg-6:last-child .faculty-card{
   margin-bottom: 0px;
 }
@@ -2250,7 +2261,7 @@ Features Area CSS
 .features-content-2 .academic-item .image .number {
   position: absolute;
   content: '';
-  bottom: -15%;
+  bottom: -12%;
   right: 5%;
 }
 

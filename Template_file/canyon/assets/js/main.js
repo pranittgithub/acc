@@ -11,38 +11,7 @@
 		}
 	});
 
-	 // Banner slides
-	 $('.slider-courser').owlCarousel({
-		nav: true,
-		loop: true,
-		dots: false,
-		margin: 0,
-		autoplay: true,
-		autoplayHoverPause: true,
-		autoplayTimeout:3000,
-		smartSpeed:1000,
-		navText: [
-			"<i class='bx bx-left-arrow-alt'></i>",
-			"<i class='bx bx-right-arrow-alt'></i>"
-		],
-		responsive: {
-			0: {
-				items: 1
-			},
-			576: {
-				items: 1
-			},
-			768: {
-				items: 1
-			},
-			992: {
-				items: 1
-			},
-			1200: {
-				items: 1
-			}
-		}
-	});
+	
 
 	 // Courses slides
 	 $('.courses-courser').owlCarousel({
@@ -142,7 +111,39 @@
 		dots: true,
 		dotsData: true,
 		autoplayHoverPause: true,
-		autoplay: true,
+		autoplay: false,
+		margin: 30,
+		items: 3,
+		navText: [
+			"<i class='bx bx-arrow-back bx-rotate-180'></i>",
+			"<i class='bx bx-arrow-back bx-rotate-0'></i>"
+		],
+		responsive: {
+			0: {
+				items: 1
+			},
+			576: {
+				items: 1
+			},
+			768: {
+				items: 1
+			},
+			992: {
+				items: 1
+			},
+			1200: {
+				items: 1
+
+			}
+		}
+	});
+	$('.faculty').owlCarousel({
+		loop: true,
+		nav: true,
+		dots: true,
+		dotsData: true,
+		autoplayHoverPause: true,
+		autoplay: false,
 		margin: 30,
 		items: 3,
 		navText: [
