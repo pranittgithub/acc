@@ -930,15 +930,18 @@ About Us Area 2 CSS
 }
 
 .about-us-area-2 .content-items .image.ct-bg-1{
-  background-image: url(../img/all-img/about-image-2.png);
+  background-image: url(../img/all-img/about-image-1.jpg);
 }
 
 .about-us-area-2 .content-items .image.ct-bg-2{
-  background-image: url(../img/all-img/about-image-3.png);
+  background-image: url(../img/all-img/about-image-2.jpg);
 }
 
 .about-us-area-2 .content-items .image.ct-bg-3{
-  background-image: url(../img//about-image-4.png);
+  background-image: url(../img/all-img/about-image-3.jpg);
+}
+.about-us-area-2 .content-items .image.ct-bg-4{
+  background-image: url(../img/all-img/about-image-4.jpg);
 }
 
 .about-us-area-2 .content-items .content {
