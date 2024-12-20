@@ -4880,9 +4880,9 @@ Footer Area CSS
   padding: 20px 0;
 }
 
-.copy-right-area .cpr-left{
+/* .copy-right-area .cpr-left{
  
-}
+} */
 
 .copy-right-area .cpr-left p{
  color: var(--paragraphColorSecond);

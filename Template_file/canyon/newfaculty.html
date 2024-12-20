@@ -344,9 +344,31 @@
         </div>
     </div>
     <!-- End Section Banner Area -->
-
+    <script>
+        const carousel = document.querySelector('.about-content-courser');
+        if (carousel) {
+            carousel.addEventListener('changed.owl.carousel', function (event) {
+                window.scrollTo({
+                    top: carousel.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('.about-content-courser');
+    
+            carousel.addEventListener('changed.owl.carousel', function (event) {
+                window.scrollTo({
+                    top: carousel.offsetTop,
+                    behavior: 'smooth' // This enables smooth scrolling
+                });
+            });
+        });
+    </script>
+    
+    
     <div class="about-content-courser owl-carousel owl-theme academics-section pt-100">
-        <div class="content-items" data-dot="<button>01</button>">
+        <div data-dot="<button>01</button>">
             <!-- <div data-aos="fade-zoom-in"> -->
                 <div class="container">
                     <div class="row">
@@ -354,10 +376,28 @@
                             <div class="ac-overview">
                                 <div class="faculty-model">
                                     <div class="row">
-                                        <div class="col-lg-3 col-sm-3 col-md-3">
+                                        <div class="col-lg-3 col-sm-6 col-md-6">
                                             <div class="faculty-card small-card">
                                                 <div class="image">
                                                     <img src="assets/img/all-img/faculty-1.png" alt="image">
+                                                    <script>
+                                                        // Wait for the DOM to load
+                                                        document.addEventListener('DOMContentLoaded', () => {
+                                                            // Select all faculty-card elements
+                                                            const facultyCards = document.querySelectorAll('.faculty-card');
+                                                    
+                                                            facultyCards.forEach(card => {
+                                                                // Add a click event listener to each card
+                                                                card.addEventListener('click', () => {
+                                                                    // Find the info section inside the clicked card
+                                                                    const infoSection = card.querySelector('.info');
+                                                    
+                                                                    // Toggle the 'visible' class to show/hide the info section
+                                                                    infoSection.classList.toggle('visible');
+                                                                });
+                                                            });
+                                                        });
+                                                    </script>
                                                     <div class="info">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                                             do
@@ -380,7 +420,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-3 col-md-3">
+                                        <div class="col-lg-3 col-sm-6 col-md-6">
                                             <div class="faculty-card small-card">
                                                 <div class="image">
                                                     <img src="assets/img/all-img/faculty-2.png" alt="image">
@@ -406,7 +446,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-3 col-md-3">
+                                        <div class="col-lg-3 col-sm-6 col-md-6">
                                             <div class="faculty-card small-card">
                                                 <div class="image">
                                                     <img src="assets/img/all-img/faculty-1.png" alt="image">
@@ -432,7 +472,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-sm-3 col-md-3">
+                                        <div class="col-lg-3 col-sm-6 col-md-6">
                                             <div class="faculty-card small-card">
                                                 <div class="image">
                                                     <img src="assets/img/all-img/faculty-2.png" alt="image">
@@ -467,7 +507,7 @@
         </div>
         <!-- button 2 -->
 
-        <div class="content-items" data-dot="<button>02</button>">
+        <div data-dot="<button>02</button>">
             <!-- <div data-aos="fade-zoom-in"> -->
                 <div class="container">
                     <div class="row">
@@ -579,8 +619,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
-
                                     </div>
                                 </div>
                             </div>
@@ -604,7 +642,7 @@
 
 
     <!-- Start Academics Section Area -->
-    <div class="academics-section pt-100 pb-70 ">
+    <!-- <div class="academics-section pt-100 pb-70 ">
         <div class="container ">
             <div class="row">
                 <div class="col-lg-12">
@@ -793,14 +831,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End Academics Section Area -->
 
 
 
 
     <!-- Start Footer Area -->
-    <div class="footer-area">
+    
+    <div class="footer-area " style="margin-top: 40px;">
         <div class="footer-widget-info ptb-100">
             <div class="container">
                 <div class="row">

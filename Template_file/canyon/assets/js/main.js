@@ -75,9 +75,9 @@
 	$('.slider-event').owlCarousel({
 		loop: true,
 		nav: true,
-		dots: false,
+		dots: true,
 		autoplayHoverPause: true,
-		autoplay: true,
+		autoplay: false,
 		margin: 30,
 		items: 3,
 		navText: [
@@ -92,13 +92,13 @@
 				items: 1
 			},
 			768: {
-				items: 2
+				items: 1
 			},
 			992: {
-				items: 2
+				items: 1
 			},
 			1200: {
-				items: 3
+				items: 1
 
 			}
 		}
@@ -136,6 +136,17 @@
 
 			}
 		}
+	});
+	const carousel = $('.about-content-courser');
+
+	carousel.on('click', '.owl-next', function () {
+		carousel.trigger('prev.owl.carousel'); // Make next button go to the previous slide
+		carousel.trigger('prev.owl.carousel'); // Make next button go to the previous slide
+	});
+
+	carousel.on('click', '.owl-prev', function () {
+		carousel.trigger('next.owl.carousel'); // Make previous button go to the next slide
+		carousel.trigger('next.owl.carousel'); // Make previous button go to the next slide
 	});
 
 
@@ -220,5 +231,16 @@
 			$("html, body").animate({ scrollTop: "0" },  500);
 		});
 	});
+
+	// $(document).ready(function () {
+	// 	$('.about-content-courser').on('changed.owl.carousel', function (event) {
+	// 		$('html, body').animate({
+	// 			scrollTop: $('.about-content-courser').offset().top
+	// 		}, 500); // Adjust the duration (500ms) as needed
+	// 	});
+	// });
+	
+
+
 
 }(jQuery));
