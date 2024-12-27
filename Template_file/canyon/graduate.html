@@ -38,8 +38,8 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                  <a class="navbar-brand" href="index.html">
-                    <img class="logo-light" src="assets/img/logo/whitelg.png"  alt="logo">
-                    <img class="logo-dark" src="assets/img/logo/lg.png" alt="logo">
+                    <img class="logo-light" src="assets/img/logo/whitelg.png" style="height:52px ; width: 206px;" alt="logo">
+                    <img class="logo-dark" src="assets/img/logo/lg.png" style="height:52px ; width: 206px;" alt="logo">
                 </a>
                 <div class="other-option d-lg-none">
                     <div class="option-item">
@@ -84,7 +84,7 @@
                             <ul class="dropdown-menu">
                                 <!-- <li class="nav-item"><a href="academics.html" class="nav-link">Academics</a></li>
                                 <li class="nav-item"><a href="undergraduate.html" class="nav-link">Undergraduate</a></li> -->
-                                <li class="nav-item"><a href="graduate.html" class="nav-link active">Strategies</a></li>
+                                <li class="nav-item"><a href="graduate.html" class="nav-link active">Our Results</a></li>
                                 <!-- <li class="nav-item"><a href="online-education.html" class="nav-link ">Statistics</a></li> -->
                                 <li class="nav-item"><a href="faculty.html" class="nav-link   ">Student Testimonials</a></li>
                             </ul>
@@ -719,8 +719,8 @@
             <div class="container">
                 <div class="banner-spacing">
                     <div class="section-info">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Strategies</h2>
-                        <p data-aos="fade-up" data-aos-delay="200">Adhikari Classes is more than just a place of learning; it's a place where dreams take flight, where ideas flourish, and where you'll find the support and...</p>
+                        <h2 data-aos="fade-up" data-aos-delay="100"> SSC Summary</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">SSC - Result, Academic Year 2009-10 to 2020-21</p>
                     </div>
                 </div>
             </div>
@@ -749,31 +749,416 @@
                         </div>
                     </div> -->
                     <div class="aid-pra">
-                        <h3>How We Achieved Outstanding Results</h3>
-                        <p>At our coaching classes, we believe that success is not just about hard work but also about following the right strategies, personalized guidance, and consistent effort. Over the years, we have honed our approach to ensure that every student gets the best opportunity to achieve their academic goals.</p>
-
-                        <br>
-
-                        <h4>01. Personalized Learning Plans</h4>
-                        <p>Every student is unique. We create tailored learning plans by assessing each student’s strengths and areas of improvement, ensuring focused progress.</p>
-
-                        <br>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Wide+Latin&display=swap');
                         
-
-                        <h4>02. Doubt Solving Sessions</h4>
-                        <p>Dedicated doubt-clearing sessions ensure that no student lags behind, enabling them to overcome academic challenges effectively.</p>
-
-                        <br>
-
-
-                        <h4>03. Regular Mock Tests</h4>
-                        <p>Our mock tests simulate real exam conditions, helping students build confidence and identify weak points through detailed performance analysis.</p>
-
-                        <br>
+                            :root {
+                              --primary-color: #e23e57;
+                              --primary-light: #ff4d6d;
+                              --primary-dark: #c62b42;
+                              --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+                              --card-shadow: 0 20px 40px rgba(226, 62, 87, 0.1);
+                            }
                         
-                        <h4>04. Holistic Development</h4>
-                        <p>Alongside academics, we focus on building confidence, improving problem-solving skills, and fostering a positive mindset.</p>
-                    </div>
+                            * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                            }
+                        
+                            /* body {
+                              font-family: Arial, sans-serif;
+                              background: var(--bg-gradient);
+                              min-height: 100vh;
+                              padding: 20px 10px;
+                              color: #333;
+                            } */
+                        
+                            .summary-title {
+                              text-align: center;
+                              font-size: clamp(18px, 3vw, 24px);
+                              color: var(--primary-color);
+                              font-weight: bold;
+                              margin-bottom: 20px;
+                              font-family: Arial, sans-serif;
+                            }
+                        
+                            .phone-number {
+                              font-family: Arial, sans-serif;
+                              font-size: clamp(14px, 2.5vw, 18px);
+                              color: var(--primary-color);
+                              margin-top: 5px;
+                              font-weight: bold;
+                            }
+                        
+                            .page-wrapper {
+                              max-width: 1400px;
+                              margin: 0 auto;
+                              padding: 20px;
+                              position: relative;
+                            }
+                        
+                            .page-wrapper::before {
+                              content: '';
+                              position: fixed;
+                              top: 0;
+                              right: 0;
+                              width: 300px;
+                              height: 300px;
+                              background: radial-gradient(circle, rgba(226, 62, 87, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+                              z-index: -1;
+                            }
+                        
+                            .page-wrapper::after {
+                              content: '';
+                              position: fixed;
+                              bottom: 0;
+                              left: 0;
+                              width: 300px;
+                              height: 300px;
+                              background: radial-gradient(circle, rgba(226, 62, 87, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+                              z-index: -1;
+                            }
+                        
+                            .header {
+                              text-align: center;
+                              margin-bottom: 40px;
+                              padding: 20px;
+                              position: relative;
+                              animation: fadeIn 1s ease-out;
+                            }
+                        
+                            .header::after {
+                              content: '';
+                              position: absolute;
+                              bottom: -10px;
+                              left: 50%;
+                              transform: translateX(-50%);
+                              width: 100px;
+                              height: 4px;
+                              background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+                            }
+                        
+                            @keyframes fadeIn {
+                              from { opacity: 0; transform: translateY(-20px); }
+                              to { opacity: 1; transform: translateY(0); }
+                            }
+                        
+                            .header .adhikari {
+                              font-family: 'Wide Latin', serif;
+                              font-size: clamp(24px, 5vw, 36px);
+                              color: var(--primary-color);
+                              letter-spacing: 2px;
+                              text-shadow: 2px 2px 4px rgba(226, 62, 87, 0.1);
+                              margin-bottom: 10px;
+                              position: relative;
+                              display: inline-block;
+                            }
+                        
+                            .header .coaching-classes {
+                              font-family: Arial Black, sans-serif;
+                              font-size: clamp(16px, 4vw, 24px);
+                              color: #333;
+                              text-transform: uppercase;
+                              letter-spacing: 2px;
+                              position: relative;
+                            }
+                        
+                            .table-container {
+                              width: 100%;
+                              max-width: 1200px;
+                              margin: auto;
+                              overflow-x: auto;
+                              box-shadow: var(--card-shadow);
+                              border-radius: 20px;
+                              background: #ffffff;
+                              padding: 25px;
+                              animation: slideUp 0.8s ease-out;
+                              position: relative;
+                              backdrop-filter: blur(10px);
+                            }
+                        
+                            .table-container::before {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              right: 0;
+                              height: 100%;
+                              background: linear-gradient(180deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.3) 100%);
+                              border-radius: 20px;
+                              z-index: -1;
+                            }
+                        
+                            table {
+                              width: 100%;
+                              min-width: 650px;
+                              border-collapse: separate;
+                              border-spacing: 0;
+                              position: relative;
+                            }
+                        
+                            th {
+                              background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+                              color: white;
+                              font-size: clamp(14px, 2vw, 16px);
+                              text-transform: uppercase;
+                              letter-spacing: 1px;
+                              font-weight: 600;
+                              padding: 15px;
+                              position: relative;
+                              overflow: hidden;
+                            }
+                        
+                            th::after {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                              transform: translateX(-100%);
+                              animation: shimmer 3s infinite;
+                            }
+                        
+                            @keyframes shimmer {
+                              100% { transform: translateX(100%); }
+                            }
+                        
+                            th:first-child { border-top-left-radius: 15px; }
+                            th:last-child { border-top-right-radius: 15px; }
+                        
+                            td {
+                              padding: 15px;
+                              font-size: clamp(13px, 1.8vw, 15px);
+                              transition: all 0.3s ease;
+                              position: relative;
+                            }
+                        
+                            tbody tr {
+                              transition: transform 0.3s ease, box-shadow 0.3s ease;
+                              position: relative;
+                            }
+                        
+                            tbody tr:hover {
+                              transform: translateY(-3px) scale(1.01);
+                              box-shadow: 0 10px 20px rgba(226, 62, 87, 0.1);
+                              z-index: 1;
+                              background: linear-gradient(to right, #fff, #ffe5ec, #fff);
+                            }
+                        
+                            .highlight-cell {
+                              color: var(--primary-color);
+                              font-weight: 600;
+                              position: relative;
+                            }
+                        
+                            footer {
+                              margin-top: 40px;
+                              text-align: center;
+                              color: #666;
+                              font-size: clamp(12px, 1.8vw, 14px);
+                              padding: 20px;
+                              position: relative;
+                            }
+                        
+                            .footer-highlight {
+                              color: var(--primary-color);
+                              font-weight: 600;
+                              display: inline-block;
+                              transform-origin: center;
+                              animation: pulse 1.5s infinite;
+                            }
+                        
+                            @keyframes pulse {
+                              0% { transform: scale(1); }
+                              50% { transform: scale(1.2); }
+                              100% { transform: scale(1); }
+                            }
+                        
+                            @media (max-width: 768px) {
+                              .table-container {
+                                padding: 15px;
+                                margin: 0 5px;
+                              }
+                        
+                              td, th {
+                                padding: 12px;
+                              }
+                        
+                              .page-wrapper::before,
+                              .page-wrapper::after {
+                                width: 150px;
+                                height: 150px;
+                              }
+                            }
+                        
+                            .table-container::-webkit-scrollbar {
+                              height: 8px;
+                              background-color: #f5f5f5;
+                              border-radius: 4px;
+                            }
+                        
+                            .table-container::-webkit-scrollbar-thumb {
+                              background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+                              border-radius: 4px;
+                            }
+                        
+                            .table-container::-webkit-scrollbar-track {
+                              background-color: #f5f5f5;
+                              border-radius: 4px;
+                            }
+                          </style>
+                        </head>
+                        <body>
+                          <div class="page-wrapper">
+                
+                            <div class="header">
+                              <div class="adhikari">Adhikari</div>
+                              <div class="coaching-classes">Coaching Classes</div>
+                            </div>
+                            <div class="table-container">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th>Session</th>
+                                    <th>Result</th>
+                                    <th>Total</th>
+                                    <th>90%+</th>
+                                    <th>80%+</th>
+                                    <th>Topper's Name</th>
+                                    <th>Topper's %</th>
+                                    <th>School</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>2020-21</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>99</td>
+                                    <td>58</td>
+                                    <td>06</td>
+                                    <td>Sonam Gunsola</td>
+                                    <td class="highlight-cell">95.20%</td>
+                                    <td>Holy Spirit</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2019-20</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>102</td>
+                                    <td>55</td>
+                                    <td>05</td>
+                                    <td>Aniket Patil</td>
+                                    <td class="highlight-cell">94.20%</td>
+                                    <td>St. Peters</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2018-19</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>85</td>
+                                    <td>27</td>
+                                    <td>02</td>
+                                    <td>Mahesh Patil</td>
+                                    <td class="highlight-cell">92.40%</td>
+                                    <td>National</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2017-18</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>102</td>
+                                    <td>37</td>
+                                    <td>07</td>
+                                    <td>Nidhi Kunwar</td>
+                                    <td class="highlight-cell">93.40%</td>
+                                    <td>Royal</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2016-17</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>45</td>
+                                    <td>25</td>
+                                    <td>02</td>
+                                    <td>Pranjal Pawar</td>
+                                    <td class="highlight-cell">93.80%</td>
+                                    <td>National</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2015-16</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>60</td>
+                                    <td>11</td>
+                                    <td>03</td>
+                                    <td>Rajvardhan Deshmukh</td>
+                                    <td class="highlight-cell">93.20%</td>
+                                    <td>St. Peters</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2014-15</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>28</td>
+                                    <td>04</td>
+                                    <td>02</td>
+                                    <td>Roopashri Belcheda</td>
+                                    <td class="highlight-cell">88.20%</td>
+                                    <td>St. Anthony</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2013-14</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>31</td>
+                                    <td>11</td>
+                                    <td>07</td>
+                                    <td>Shraddha Pimparkar</td>
+                                    <td class="highlight-cell">93.20%</td>
+                                    <td>St. Anthony</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2012-13</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>14</td>
+                                    <td>07</td>
+                                    <td>03</td>
+                                    <td>Atul Kanoliya</td>
+                                    <td class="highlight-cell">92.18%</td>
+                                    <td>Holy Spirit</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2011-12</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>17</td>
+                                    <td>01</td>
+                                    <td>07</td>
+                                    <td>Chandan Maurya</td>
+                                    <td class="highlight-cell">90.36%</td>
+                                    <td>St. Anthony</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2010-11</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>03</td>
+                                    <td>03</td>
+                                    <td>03</td>
+                                    <td>Steven Quadros</td>
+                                    <td class="highlight-cell">86.73%</td>
+                                    <td>St. Anthony</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2009-10</td>
+                                    <td class="highlight-cell">100%</td>
+                                    <td>03</td>
+                                    <td>03</td>
+                                    <td>03</td>
+                                    <td>Mukesh Singh</td>
+                                    <td class="highlight-cell">89.27%</td>
+                                    <td>St. Anthony</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        
+                        </div>
 
                     
 
@@ -915,7 +1300,7 @@
                             <div class="footer-widget">
                                 <h4>Our Results</h4>
                                 <ul>
-                                    <li><a href="graduate.html"><i class='bx bx-chevron-right'></i> Strategies</a></li>
+                                    <li><a href="graduate.html"><i class='bx bx-chevron-right'></i>SSC Summary</a></li>
                                     <!-- <li><a href="online-education.html"><i class='bx bx-chevron-right'></i> Statistics</a></li> -->
                                     <li><a href="faculty.html"><i class='bx bx-chevron-right'></i>Student Testimonials</a></li>
                                     <!-- <li><a href="date-deadlines.html"><i class='bx bx-chevron-right'></i> Time Schedule</a></li>
