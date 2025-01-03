@@ -109,7 +109,7 @@
 		dots: true,
 		// dotsData: true,
 		autoplayHoverPause: true,
-		autoplay: true,
+		autoplay: false,
 		autoplayTimeout: 3000,
 		margin: 30,
 		items: 3,

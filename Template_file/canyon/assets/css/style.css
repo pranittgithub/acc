@@ -473,7 +473,7 @@ Banner Area 2 CSS
       background-image: url(../img/banner/13.JPG); /* Second Image */
   }
   53%,80.33% {
-      background-image: url(../img/banner/14.JPG); /* Third Image */
+      background-image: url(../img/banner/banner-2.png); /* Third Image */
   }
   86.33%,100% {
       background-image: url(../img/banner/15.jpg); /* Third Image */
@@ -1623,7 +1623,7 @@ Academics Section Area CSS
 }
 .academics-section .ac-overview .gallery {
   margin-top: 50px;
-  margin-bottom: 160px;
+  margin-bottom: 50px;
 }
 .academics-section .ac-overview .gallery .gallery-image ul {
   padding: 0px;
@@ -2065,10 +2065,10 @@ Academics Section Area CSS
   margin-bottom: 0px;
 }
 .aid-pra {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 .aid-pra:last-child{
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .aid-pra h4{
   margin-bottom: 0px;
@@ -2079,8 +2079,12 @@ Academics Section Area CSS
 .deadlines-list .list-item-list:last-child{
   margin-bottom: 0px;
 }
+.univercity-life{
+  padding: 0px;
+}
 .univercity-life .image{
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
+
 }
 .univercity-life .apply-program .image{
   margin-bottom: 0px;
