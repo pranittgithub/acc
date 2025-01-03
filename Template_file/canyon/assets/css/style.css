@@ -456,19 +456,19 @@ Banner Area 2 CSS
 =================================================*/
 
 .big-bg-2{
-  background-image: url(../img/banner/12.jpg);
+  background-image: url(../img/banner/13.jpg);
   background-size: cover;
   position:relative;
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 250px;
   padding-bottom: 200px;
-  animation: backgroundChange 21s infinite ease-in-out;
+  animation: backgroundChange 21s infinite ;
 }
 @keyframes backgroundChange {
-  0%,13.67% {
-      background-image: url(../img/banner/15.jpg); /* First Image */
-  }
+  /* 0%,13.67% {
+      background-image: url(../img/banner/.jpg); /* First Image */
+  
   16.67%,47%{
       background-image: url(../img/banner/13.jpg); /* Second Image */
   }
@@ -489,6 +489,7 @@ Banner Area 2 CSS
     background:#120f2d;
 	  opacity:0.4;
 }
+
 .nav-style-2.navbar-area {
   top: 0px;
   position: absolute;
