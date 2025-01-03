@@ -456,7 +456,7 @@ Banner Area 2 CSS
 =================================================*/
 
 .big-bg-2{
-  background-image: url(../img/banner/13.jpg);
+  background-image: url(../img/banner/13.JPG);
   background-size: cover;
   position:relative;
   background-repeat: no-repeat;
@@ -466,14 +466,14 @@ Banner Area 2 CSS
   animation: backgroundChange 21s infinite ;
 }
 @keyframes backgroundChange {
-  /* 0%,13.67% {
-      background-image: url(../img/banner/.jpg); /* First Image */
-  
+  0%,13.67% {
+      background-image: url(../img/banner/15.jpg); /*first image*/
+}
   16.67%,47%{
-      background-image: url(../img/banner/13.jpg); /* Second Image */
+      background-image: url(../img/banner/13.JPG); /* Second Image */
   }
   53%,80.33% {
-      background-image: url(../img/banner/14.jpg); /* Third Image */
+      background-image: url(../img/banner/14.JPG); /* Third Image */
   }
   86.33%,100% {
       background-image: url(../img/banner/15.jpg); /* Third Image */
