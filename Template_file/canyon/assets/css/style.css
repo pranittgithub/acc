@@ -1774,12 +1774,14 @@ Academics Section Area CSS
 }
 .faculty-model .col-lg-6 .faculty-card{
   margin-bottom: 30px;
+
 }
 
-.faculty-model .col-lg-6 .faculty-card.small-card {
-  max-width: 300px; /* Set a smaller width */
+.faculty-model .col-sm-6 .faculty-card.small-card {
+  max-width: auto; /* Set a smaller width */
   padding: 10px; /* Reduce padding */
   font-size: 14px; /* Adjust font size for smaller look */
+  margin-bottom: 50px;
 }
 
 
