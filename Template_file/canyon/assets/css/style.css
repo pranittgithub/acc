@@ -1640,7 +1640,7 @@ Academics Section Area CSS
 .academics-section .ac-overview .gallery .gallery-image ul li:last-child {
   position: absolute;
   bottom: -120px;
-  right: 0;
+  left: 0;
   content: '';
 }
 .academics-section .ac-overview .pera-dec h3{
