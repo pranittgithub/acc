@@ -461,22 +461,22 @@ Banner Area 2 CSS
   position:relative;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 250px;
+  padding-top: 450px;
   padding-bottom: 200px;
   animation: backgroundChange 21s infinite ;
 }
 @keyframes backgroundChange {
   0%,13.67% {
-      background-image: url(../img/banner/15.jpg); /*first image*/
+      background-image: url(../img/banner/b3.png); /*first image*/
 }
   16.67%,47%{
-      background-image: url(../img/banner/13.JPG); /* Second Image */
+      background-image: url(../img/banner/b2.png); /* Second Image */
   }
   53%,80.33% {
-      background-image: url(../img/banner/banner-2.png); /* Third Image */
+      background-image: url(../img/banner/b1.png); /* Third Image */
   }
   86.33%,100% {
-      background-image: url(../img/banner/15.jpg); /* Third Image */
+      background-image: url(../img/banner/b3.png); /* Third Image */
   }
 }
 .big-bg-2::before {    
@@ -519,7 +519,7 @@ Banner Area 2 CSS
 }
 
 .banner-content-2 {
-  max-width: 1100px;
+  max-width: 100%;
   text-align: center;
   margin: auto;
   position: relative;
@@ -533,7 +533,8 @@ Banner Area 2 CSS
 .banner-content-2 .content h1{
   color: var(--whiteColor);
   font-family: 'Lexend', sans-serif;
-  font-size: 90px;
+  font-size: 60px;
+  padding-top:30px;
 }
 
 .banner-content-2 .content p {
