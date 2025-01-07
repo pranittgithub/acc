@@ -467,16 +467,16 @@ Banner Area 2 CSS
 }
 @keyframes backgroundChange {
   0%,13.67% {
-      background-image: url(../img/banner/b3.png); /*first image*/
+      background-image: url(../img/banner/b3.jpg); /*first image*/
 }
   16.67%,47%{
-      background-image: url(../img/banner/b2.jpg); /* Second Image */
+      background-image: url(../img/banner/b2.png); /* Second Image */
   }
   53%,80.33% {
       background-image: url(../img/banner/b1.png); /* Third Image */
   }
   86.33%,100% {
-      background-image: url(../img/banner/b3.png); /* Third Image */
+      background-image: url(../img/banner/b3.jpg); /* Third Image */
   }
 }
 .big-bg-2::before {    
